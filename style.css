@@ -1,0 +1,105 @@
+#headertxt {
+    text-align: center;
+    margin-top: 1%;
+    width: 100%;
+    border-style: dotted;
+    border-color: red;
+    border-width: 1px;
+}
+p{
+    font-size: 1.5rem;
+}
+
+
+#usr_input_container {
+    width: 100%;
+    border-style: solid;
+    border-color: crimson;
+}
+.divider {
+    border-style: solid;
+    border-width: 2px;
+}
+#weight_title {
+    display: inline;
+}
+#weight_input {
+    display: inline;
+    width: 15vw;
+}
+#weight_unit_title {
+    display: inline;
+}
+
+#height_title {
+    display: inline;
+}
+#height_input {
+    display: inline;
+    width: 15vw;
+}
+#height_unit_title {
+    display: inline;
+}
+
+#bmi_val_title {
+    display: inline;
+    font-weight: bold;
+}
+#bmi_val_display {
+    display: inline;
+    font-weight: normal;
+}
+#bmi_val_description {
+    display: inline;
+    font-weight: normal;
+}
+
+#calc_btn {
+    width: 25rem;
+    height: 2rem;
+}
+
+#history_title {
+    font-size: 2rem;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: inline-block;
+}
+
+#history_table {
+    width: 100%;
+    border-collapse: collapse; /* Merges cell borders into one single line */
+    table-layout: fixed;       /* Forces equal column widths */
+}
+
+th, td {
+    border-style: solid;
+    border-color: indigo;   /* Single solid border on every cell */
+    padding: 8px;
+    width: 50%;
+}
+
+#clear_all_btn {
+    color: darkcyan;
+    text-decoration: none;
+    display: inline;
+    font-size: 1.1rem;
+    margin-left: 0.2vw;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#clear_all_btn:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+    #headertxt{
+        text-align: left;
+    }
+    #calc_btn {
+        width: 100%;
+    }
+}

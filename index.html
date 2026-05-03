@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMS Tracker System (Body - Mass - Index)</title>
+    <link rel="stylesheet" href="style.css?v=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Formula is: weight / height**2 (in meters) -->
+     <!-- We also want to keep track of the BMI over time -->
+    <h1 id="headertxt">
+        Body Mass Index System
+    </h1>
+    <!-- User input -->
+    <div id="usr_input_container">
+        <!-- We take weight and height from the user -->
+        <p id="weight_title">
+            Weight: 
+        </p>
+        <input type="number" name="Weight" id="weight_input" value="1" min="1" max="500">
+        <p id="weight_unit_title">
+          Kilograms
+        </p>
+        <hr class="divider">
+        <p id="height_title">
+            Height: 
+        </p>
+        <input type="number" name="Height" id="height_input" min="25" max="272" value="25">
+        <p id="height_unit_title">
+            centimeters
+        </p>
+        <hr class="divider">
+        <input type="button" value="Calculate" id="calc_btn">
+        <hr class="divider">
+        <p id="bmi_val_title">
+            BMI Value: 
+            <p id="bmi_val_display">Press Calculate to Calculate...</p>
+            (<p id="bmi_val_description">N/A</p>)
+        </p>
+        
+    </div>
+    <!-- Display history -->
+    <p id="history_title">
+        History
+    </p>
+    <!-- Clear all link/button -->
+    <button id="clear_all_btn">Clear All</button>
+    <table id="history_table">
+        <thead>
+            <tr>
+                <th>
+                    BMI Value
+                </th>
+                <th>
+                    Calculated at
+                </th>
+            </tr>
+        </thead>
+        <tbody id="history_table_contents">
+        </tbody>
+    </table>
+</body>
+</html>
