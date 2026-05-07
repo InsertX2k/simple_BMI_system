@@ -7,7 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
 </head>
-<body>
+<body class="blur noclicks">
+    <!-- A full-page overlay that asks for the age of the user -->
+    <!-- Before they can continue-->
+    <div id="age_check_overlay" class="noblur allclicks">
+        <p class="age_check_overlay_p">
+            You must confirm that you're:
+        </p>
+        <center>
+           <p id="eighteen_plus_word_big_center">
+            18+
+           </p> 
+        </center>
+        <p class="age_check_overlay_p" id="age_check_overlay_text">
+            BMI (Body-Mass-Index) produces inaccurate results for teens and children, therefore, you must be an adult to be able to use this BMI Calculator. Please, if you are not an adult, leave this website.
+        </p>
+        <!-- The yes I'm 18+ button -->
+        <button id="age_check_confirm_btn">Yes, I'm over 18</button>
+    </div>
+
+
     <!-- Formula is: weight / height**2 (in meters) -->
      <!-- We also want to keep track of the BMI over time -->
     <h1 id="headertxt">
@@ -15,11 +34,20 @@
     </h1>
     <!-- User input -->
     <div id="usr_input_container">
+        <p class="inline_p">
+            Use this system:
+        </p>
+        <input type="radio" name="sys" id="metric_radio_elem" value="metric" checked class="radio_elems">
+        <label for="metric_radio_elem">Metric System (SI, Worldwide)</label>
+        <input type="radio" name="sys" id="imperial_radio_elem" value="imperial" class="radio_elems">
+        <label for="imperial_radio_elem">Imperial System (US)</label>
+        <!-- Divider -->
+        <hr class="divider">
         <!-- We take weight and height from the user -->
         <p id="weight_title">
             Weight: 
         </p>
-        <input type="number" name="Weight" id="weight_input" value="1" min="1" max="500">
+        <input type="number" name="Weight" id="weight_input" value="1" min="1" max="1212">
         <p id="weight_unit_title">
           Kilograms
         </p>
@@ -39,7 +67,31 @@
             <p id="bmi_val_display">Press Calculate to Calculate...</p>
             (<p id="bmi_val_description">N/A</p>)
         </p>
-        
+        <!-- Divider -->
+        <hr class="divider">
+        <div id="scale_container">
+            <!-- underweight: purple, normal:green, overweight: yellow, obese:red -->
+            <div id="underweight_category" class="weight_category">
+                <p class="weight_category_title htext" id="uw_cat_title">
+                    Underweight
+                </p>
+            </div>
+            <div id="normal_category" class="weight_category">
+                <p class="weight_category_title htext" id="normal_cat_title">
+                    Normal
+                </p>
+            </div>
+            <div id="overweight_category" class="weight_category">
+                <p class="weight_category_title htext" id="ow_cat_title">
+                    Overweight
+                </p>
+            </div>
+            <div id="obese_category" class="weight_category">
+                <p class="weight_category_title htext" id="obese_cat_title">
+                    Obese
+                </p>
+            </div>
+        </div>
     </div>
     <!-- Display history -->
     <p id="history_title">

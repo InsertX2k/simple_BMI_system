@@ -26,6 +26,12 @@ p{
 #weight_input {
     display: inline;
     width: 15vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#weight_input:hover {
+    border-color: darkcyan;
 }
 #weight_unit_title {
     display: inline;
@@ -37,6 +43,13 @@ p{
 #height_input {
     display: inline;
     width: 15vw;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#height_input:hover {
+    border-color: darkcyan;
 }
 #height_unit_title {
     display: inline;
@@ -58,6 +71,20 @@ p{
 #calc_btn {
     width: 25rem;
     height: 2rem;
+    background-color: transparent;
+    border-color: darkcyan;
+    border-style: solid;
+    cursor: pointer;
+    border-radius: 1vw;
+}
+#calc_btn:hover {
+    border-color: black;
+    background-color: rgba(0, 139, 139, 0.144);
+    border-radius: 0vw;
+}
+#calc_btn:active {
+    background-color: darkcyan;
+    color: white;
 }
 
 #history_title {
@@ -93,6 +120,166 @@ th, td {
 #clear_all_btn:hover {
     text-decoration: underline;
 }
+
+/*
+    The age check full-page overlay
+*/
+#age_check_overlay {
+    display: block;
+    position:absolute;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 50%;
+    box-shadow: 0px 0px 20vh 5vh black;
+    border-radius: 2vw;
+    padding: 1vw;
+    overflow: hidden;
+}
+#eighteen_plus_word_big_center {
+    font-size: 13rem;
+    color: red;
+    margin: 0px;
+}
+.age_check_overlay_p {
+    margin: 0px;
+}
+#age_check_overlay_text {
+    font-size: 1rem;
+    font-weight:bold;
+}
+#age_check_confirm_btn {
+    font-size: 1.5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 1.5%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: darkcyan;
+    border-radius: 1vw;
+    transition: all 0.5s;
+}
+#age_check_confirm_btn:hover {
+    border-color: black;
+    border-radius: 0vw;
+    background-color: rgba(0, 139, 139, 0.144);
+}
+#age_check_confirm_btn:active {
+    background-color: darkcyan;
+    color: white;
+}
+.inline_p {
+    display: inline;
+}
+/* Blur class*/
+.blur > * {
+    filter: blur(5px);
+}
+
+.noblur {
+    filter: none;
+    z-index: 2;
+}
+.noblur > * {
+    filter: none;
+}
+/* A class for disabling clicks */
+.noclicks * {
+    pointer-events: none;
+    user-select: none;
+}
+
+.allclicks {
+    pointer-events: all;
+    user-select: text;
+}
+.allclicks * {
+    pointer-events: all;
+    user-select: text;
+}
+/*
+    age-check full-page overlay END
+*/
+
+/*
+    Apply transition effect to all input elements in the page
+*/
+input {
+    transition: all 0.5s;
+}
+.radio_elems {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50%;
+}
+.radio_elems:checked {
+    color: darkcyan;
+    border-color: darkcyan;
+    border-style: solid;
+    border-width: 4px;
+}
+.radio_elems:hover {
+    border-color: darkcyan;
+    border-width: 2px;
+    border-radius: 0%;
+}
+
+/*
+    Scale container
+*/
+#scale_container {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+}
+.weight_category {
+    height: 100%;
+    width: 25%;
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    transition: all 1s;
+}
+
+.htext {
+    display: none;
+}
+.vtext {
+    display: block;
+    color: white;
+}
+
+
+/*
+    Setting defaults for weight_categories divs
+*/
+#underweight_category {
+    background-color: rgba(128, 0, 128, 0.144);
+}
+#normal_category {
+    background-color: rgba(0, 128, 0, 0.144);
+}
+#overweight_category {
+    background-color: rgba(255, 255, 0, 0.144);
+}
+#obese_category {
+    background-color: rgba(255, 0, 0, 0.144);
+}
+
+
+/* END Default setting for weight categories divs */
 
 
 @media screen and (max-width: 600px) {
