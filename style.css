@@ -125,8 +125,8 @@ th, td {
     The age check full-page overlay
 */
 #age_check_overlay {
-    display: block;
-    position:absolute;
+    display:block;
+    position:fixed;
     border-width: 1px;
     border-color: black;
     border-style: solid;
